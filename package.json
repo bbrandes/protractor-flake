@@ -1,7 +1,6 @@
 {
   "name": "protractor-flake",
   "description": "A wrapper for protractor to automatically re-run failed specs for a specific number of attempts",
-  "version": "1.0.4",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
@@ -43,9 +42,8 @@
     "standard": "^5.4.1"
   },
   "dependencies": {
-    "core-js": "^0.9.18",
     "minimist": "^1.1.2",
-    "sax": "^1.2.1"
+    "core-js": "^0.9.18"
   },
   "peerDependencies": {
     "protractor": ">= 2.x"
