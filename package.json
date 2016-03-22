@@ -43,9 +43,8 @@
     "standard": "^5.4.1"
   },
   "dependencies": {
-    "core-js": "^0.9.18",
     "minimist": "^1.1.2",
-    "sax": "^1.2.1"
+    "core-js": "^0.9.18"
   },
   "peerDependencies": {
     "protractor": ">= 2.x"
