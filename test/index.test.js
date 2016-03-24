@@ -39,14 +39,6 @@ describe('Protractor Flake', () => {
   })
 
   context('failed specs', () => {
-    it('calls callback with an err if a bad protractorPath is specified', (done) => {
-      protractorFlake({maxAttempts: 1, protractorPath: '/dev/null'}, (status) => {
-        expect(status).to.equal(status, 1)
-        done()
-      })
-
-      spawnStub.endCallback(1)
-    })
 
     it('calls callback with an err if a negative status is returned', (done) => {
       protractorFlake({maxAttempts: 1}, (status) => {
@@ -131,7 +123,7 @@ describe('Protractor Flake', () => {
 
   context('options', () => {
     it('allows a different path for protractor by using protractorPath option', () => {
-      protractorFlake({protractorPath: pathToProtractor()})
+      protractorFlake({protractorPath: '/arbitrary/path/to/protractor'})
 
       expect(spawnStub).to.have.been.calledWith('node', [pathToProtractor()])
     })
