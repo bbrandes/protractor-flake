@@ -39,7 +39,6 @@ describe('Protractor Flake', () => {
   })
 
   context('failed specs', () => {
-
     it('calls callback with an err if a negative status is returned', (done) => {
       protractorFlake({maxAttempts: 1}, (status) => {
         expect(status).to.equal(status, 1)
@@ -125,7 +124,7 @@ describe('Protractor Flake', () => {
     it('allows a different path for protractor by using protractorPath option', () => {
       protractorFlake({protractorPath: '/arbitrary/path/to/protractor'})
 
-      expect(spawnStub).to.have.been.calledWith('node', [pathToProtractor()])
+      expect(spawnStub).to.have.been.calledWith('node', ['/arbitrary/path/to/protractor'])
     })
 
     it('allows a different path for node by using nodeBin option', () => {
