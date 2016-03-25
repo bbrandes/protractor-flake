@@ -1,4 +1,5 @@
 {
+  "version": "1.0.4",
   "name": "protractor-flake",
   "description": "A wrapper for protractor to automatically re-run failed specs for a specific number of attempts",
   "main": "dist/index.js",
